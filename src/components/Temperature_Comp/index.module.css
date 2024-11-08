@@ -1,0 +1,27 @@
+.content{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content .temp h1{
+    font-size: 62px;
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.temp h1 sup{
+    font-size: 62px;
+    color: #4c4fce;
+}
+
+.temp h1 .degree{
+    font-size: 30px;
+}
+
+p{
+    text-align: center;
+}

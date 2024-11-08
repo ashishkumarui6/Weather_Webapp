@@ -1,0 +1,9 @@
+.weatherDeatail{
+    width: 25%;
+    text-align: center;
+}
+
+
+.weatherDeatail p{
+    font-size: 20px;
+}
