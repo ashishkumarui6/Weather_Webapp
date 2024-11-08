@@ -13,3 +13,11 @@
 body{
   background-color: #cecece;
 }
+
+.loading{
+  visibility: hidden;
+}
+
+.Noloading{
+  visibility: visible;
+}

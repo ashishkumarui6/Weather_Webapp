@@ -1,21 +1,23 @@
 import React from "react";
 import styles from "./index.module.css";
 
-const Temperature_Comp = ({ name }) => {
+const Temperature_Comp = ({ img, city, country, temp, desc }) => {
   return (
     <div className={styles.content}>
-      <h1>Mumbai, IN</h1>
+      <h1>
+        {city}, {country}
+      </h1>
       <p>As of 11:00:00 AM</p>
       <div className={styles.temp}>
         <h1>
-          31
-          <sup className={styles.degree}>{name}</sup>
+          {temp}
+          <sup className={styles.degree}>o</sup>
           <sup>c</sup>
         </h1>
         <div>
-          <p>smoke</p>
+          <p>{desc}</p>
           <div>
-            <img src="" alt="" />
+            <img src={img} alt="" />
           </div>
         </div>
       </div>
