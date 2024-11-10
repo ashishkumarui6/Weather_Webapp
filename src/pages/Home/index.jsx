@@ -36,10 +36,15 @@ const Home = () => {
           <div className={styles.top}>
             <input
               type="text"
+              placeholder="Select City"
               value={city}
               onChange={(e) => setCity(e.target.value)}
             />
-            <input type="text" />
+            <input
+              className={styles.input_2}
+              type="text"
+              placeholder="Select Country"
+            />
             <Button name="Submit" onclick={onGetsubmit} />
           </div>
           {wapiData !== undefined ? (

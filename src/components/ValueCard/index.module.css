@@ -7,3 +7,19 @@
 .weatherDeatail p{
     font-size: 20px;
 }
+
+@media screen and (min-width: 0px) and (max-width: 480px){
+    .weatherDeatail{
+        width: 25%;
+        text-align: center;
+    }
+
+    .weatherDeatail h2{
+        font-size: 11px;
+    }
+
+
+    .weatherDeatail p{
+        font-size: 11px;
+    }
+}

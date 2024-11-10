@@ -6,6 +6,8 @@
     flex-direction: column;
 }
 
+
+
 .content .temp h1{
     font-size: 62px;
     display: flex;
@@ -24,4 +26,31 @@
 
 p{
     text-align: center;
+}
+
+@media screen and (min-width: 0px) and (max-width: 480px){
+
+    h1{
+        font-size: 19px;
+    }
+    
+    .content .temp h1{
+        font-size: 30px;
+        display: flex;
+        align-items: flex-start;
+    }
+    
+    
+    .temp h1 sup{
+        font-size: 30px;
+        color: #4c4fce;
+    }
+    
+    .temp h1 .degree{
+        font-size: 20px;
+    }
+    
+    p{
+        text-align: center;
+    }
 }
