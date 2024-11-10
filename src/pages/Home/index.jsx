@@ -23,9 +23,8 @@ const Home = () => {
           setWapiData(finalRes);
         }
         setIsloading(false);
-        console.log(finalRes);
+        // console.log(finalRes);
       });
-    setSubmit(city);
     setCity("");
   };
 
