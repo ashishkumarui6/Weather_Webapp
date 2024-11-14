@@ -23,8 +23,8 @@ const Home = () => {
           setWapiData(finalRes);
         }
         setIsloading(false);
-        // console.log(finalRes);
       });
+    console.log(wapiData);
     setCity("");
   };
 
@@ -49,30 +49,24 @@ const Home = () => {
           {wapiData !== undefined ? (
             <>
               <div className={styles.mid}>
-                <div className={isloading ? "" : "loading"}>
-                  <img
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif"
-                    alt="loading"
+                {isloading ? (
+                  <div className={isloading ? "" : "loading"}>
+                    <img
+                      src="https://upload.wikimedia.org/wikipedia/commons/c/c7/Loading_2.gif"
+                      alt="loading"
+                    />
+                  </div>
+                ) : (
+                  <Temperature_Comp
+                    city={wapiData.name}
+                    country={wapiData.sys.country}
+                    temp={wapiData.main.temp}
+                    desc={wapiData.weather[0].description}
+                    img={`https://openweathermap.org/img/w/${wapiData.weather[0].icon}.png`}
                   />
-                </div>
-                <Temperature_Comp
-                  city={wapiData.name}
-                  country={wapiData.sys.country}
-                  temp={wapiData.main.temp}
-                  desc={wapiData.weather[0].description}
-                  img={`https://openweathermap.org/img/w${wapiData.weather[0].icon}.png`}
-                />
+                )}
               </div>
-              <div className={styles.bot}>
-                <ValueCard />
-                <ValueCard />
-                <ValueCard />
-                <ValueCard />
-                <ValueCard />
-                <ValueCard />
-                <ValueCard />
-                <ValueCard />
-              </div>
+              <div className={styles.bot}></div>
             </>
           ) : (
             <p>No Data Found</p>
